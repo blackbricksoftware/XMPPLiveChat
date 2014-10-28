@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+	<name>XMPP Live Chat</name>
+	<version>0.0.1</version>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <author>Black Brick Software LLC</author>
+    <authorEmail>david@blackbricksoftware.com</authorEmail>
+    <authorUrl>https://blackbricksoftware.com</authorUrl>
+    <copyright>Copyright © 2014-2014 Black Brick Software LLC. All rights reserved.</copyright>
+    <creationDate>28 October 2014</creationDate>
+    <description><![CDATA[<p>XMPP Live Chat for Joomla 3+. Created by <a href="http://blackbricksoftware.com/" target="_blank">Black Brick Software LLC</a>.</p><p>A browser bases chat client.</p>]]></description>
+	<files>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>LICENSE.GPL</filename>
+		<filename module="mod_xmpplivechat">mod_xmpplivechat.php</filename>
+		<folder>tmpl</folder>
+	</files>
+	<media destination="mod_xmpplivechat">
+		<folder>assets</folder>
+	</media>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+			</fieldset>
+			<fieldset name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="textarea" rows="3"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static">
+					<option
+						value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
